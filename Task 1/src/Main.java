@@ -26,26 +26,27 @@ public class Main {
         // 4. 5 слез вурдалака + 10 пельменей + 4 жабьих глаза + 3 кости ворона - Запретный эликсир
 
         //todo дописать логику программы сюда
-        while (flag) {
+        boolean fl = true;
+        while (fl) {
             if (toadEyesCount >= 3 && ravenBonesCount >= 1) {
                 System.out.println("Вы можете приготовить эликсир зоркости");
-                if (ravenBonesCount >= 2 && dumplingsCount >= 4) {
-                    System.out.println("Вы можете приготовить эликсир стойкости");
-                    if (toadEyesCount >= 2 && ghoulTearsCount >= 7 && dumplingsCount >= 1) {
-                        System.out.println("Вы можете приготовить эликсир скрытности");
-                        if (toadEyesCount >= 4 && ghoulTearsCount >= 5 && dumplingsCount >= 10 && ravenBonesCount >= 3) {
-                            System.out.println("Вы можете приготовить запретный эликсир");
-                        }
-                    }
-                }
-            } else {
+            }
+            if (ravenBonesCount >= 2 && dumplingsCount >= 4) {
+                System.out.println("Вы можете приготовить эликсир стойкости");
+            }
+            if (toadEyesCount >= 2 && ghoulTearsCount >= 7 && dumplingsCount >= 1) {
+                System.out.println("Вы можете приготовить эликсир скрытности");
+            }
+            if (toadEyesCount >= 4 && ghoulTearsCount >= 5 && dumplingsCount >= 10 && ravenBonesCount >= 3) {
+                System.out.println("Вы можете приготовить запретный эликсир");
+            }
+            if (toadEyesCount < 2 && ghoulTearsCount < 5 && dumplingsCount < 1 && ravenBonesCount < 2){
                 System.out.println("У Вас не хватает ингридиентов для приготовления эликсира");
             }
-                flag = false;
-            }
+            fl = false;
         }
     }
-
+}
 
 
 
